@@ -109,8 +109,8 @@ body {
   opacity: .8;
 }
 
-.spending-card .chart-item div.wed:hover:after {
-  content: "$52.36";
+
+.spending-card .chart-item div:hover::after {
   font-size: .8rem;
   background-color: var(--Dark-brown);
   color: var(--Cream);
@@ -123,20 +123,33 @@ body {
   opacity: 1;
 }
 
-.spending-card .chart-item div.thu:hover:after {
-  content: "$31.07";
-  font-size: .8rem;
-  background-color: var(--Dark-brown);
-  color: var(--Cream);
-  font-weight: 800;
-  padding: .2rem .5rem;
-  position: relative;
-  top: -2rem;
-  left: -.7rem;
-  border-radius: .3rem;
-  opacity: 1;
+.spending-card .chart-item div.mon:hover:after {
+  content: "$17.45";
 }
 
+.spending-card .chart-item div.tue:hover:after {
+  content: "$34.91";
+}
+
+.spending-card .chart-item div.wed:hover:after {
+  content: "$52.36";
+}
+
+.spending-card .chart-item div.thu:hover:after {
+  content: "$31.07";
+}
+
+.spending-card .chart-item div.fri:hover:after {
+  content: "$23.39";
+}
+
+.spending-card .chart-item div.sat:hover:after {
+  content: "$43.28";
+}
+
+.spending-card .chart-item div.sun:hover:after {
+  content: "$25.48";
+}
 
 
 .spending-card .chart-item span {
