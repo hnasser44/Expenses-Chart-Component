@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+  --Soft-Red: hsl(10,79%, 65%);
+  --Cyan: hsl(186,34%,60%);
+  --Dark-brown: hsl(25,47%,15%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-Pale-Orange: hsl(33, 100%, 98%);
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--Dark-brown);
+  background-color: var(--Cream);
+  margin-top: 3rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.balance-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Soft-Red);
+  width: 100%;
+  padding: .5rem 1.3dvh;
+  border-radius: 1rem;
+  color: var(--Cream);
+  font-weight: bold;
+}
+
+.balance {
+  margin-left: 1rem;
+}
+
+.balance li:first-child {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.balance li:last-child {
+  font-size: 1.6rem;
+}
+
+.balance-card div:last-child {
+  margin-right: 1rem;
+}
+
+.spending-card {
+  background-color: var(--Very-Pale-Orange);
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0 2rem;
+}
+
+.spending-card h1 {
+  font-size: 1.8rem;
+
+}
+
+.spending-card .chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.spending-card .chart-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.spending-card .chart-item div {
+  width: 2.5rem;
+  height: 10rem;
+  background-color: var(--Soft-Red);
+  border-radius: .3rem;
+  cursor: pointer;
+  margin-bottom: .8rem;
+}
+
+.spending-card .chart-item div:hover {
+  opacity: .8;
+}
+
+.spending-card .chart-item div.wed:hover:after {
+  content: "$52.36";
+  font-size: .8rem;
+  background-color: var(--Dark-brown);
+  color: var(--Cream);
+  font-weight: 800;
+  padding: .3rem .5rem;
+  position: relative;
+  top: -2rem;
+  left: -.7rem;
+  border-radius: .3rem;
+  opacity: 1;
+}
+
+.spending-card .chart-item div.thu:hover:after {
+  content: "$31.07";
+  font-size: .8rem;
+  background-color: var(--Dark-brown);
+  color: var(--Cream);
+  font-weight: 800;
+  padding: .2rem .5rem;
+  position: relative;
+  top: -2rem;
+  left: -.7rem;
+  border-radius: .3rem;
+  opacity: 1;
+}
+
+
+
+.spending-card .chart-item span {
+  color: var(--Cyan);
+}
+
+.spending-card .chart {
+  border-bottom: 3px solid var(--Cyan);
+  
+}
+
+.spending-card .chart-item div.mon {
+  height: 3rem;
+}
+
+.spending-card .chart-item div.tue {
+  height: 6rem;
+}
+
+.spending-card .chart-item div.wed {
+  background-color: var(--Cyan);
+}
+
+.spending-card .chart-item div.thu {
+  height: 5rem;
+}
+
+.spending-card .chart-item div.fri {
+  height: 3rem;
+}
+
+.spending-card .chart-item div.sat {
+  height: 8rem;
+}
+
+.spending-card .chart-item div.sun {
+  height: 3.5rem;
+}
+
+.spending-card .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.spending-card .total-l li:first-child {
+  font-size: 1.3rem;
+  color: var(--Cyan);
+}
+
+.spending-card .total-l li:last-child {
+  font-size: 1.8rem;
+  color: var(--Dark-brown);
+  font-weight: 800;
+}
+
+.spending-card .total-r li:last-child {
+  font-size: 1.1rem;
+  color: var(--Cyan);
+}
+
+.spending-card .total-r li:first-child {
+  font-size: 1.2rem;
+  color: var(--Dark-brown);
+  font-weight: 800;
+  text-align: right;
+}
+
+@media screen and (max-width: 450px) {
+
+  .spending-card h1 {
+    font-size: 1.3rem;
+  }
+
+  .spending-card .chart {
+    font-size: .9rem;
+  }
+
+  .spending-card .chart-item div {
+    width: 1.5rem;
+  }
+
+
+  .spending-card .total li  {
+    font-size: 1rem !important;
+  }
+}
